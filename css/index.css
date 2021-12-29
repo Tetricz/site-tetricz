@@ -42,7 +42,7 @@
 
 .full-bg-color {
     background-color: #0d1117;
-    color: #ffffff;
+    color: #c9d1d9;
 }
 
 .rounded-corners{
@@ -50,11 +50,11 @@
     border-radius: .3rem;
     outline-style: solid;
     outline-width: 0.1rem;
-    outline-color: #242c38;
+    outline-color: #252931;
 }
 
 .heading-line{
-    border: 0.1rem solid #131820
+    border: 0.001rem solid #252931
 }
 
 .main-content{
@@ -67,10 +67,24 @@
     margin-bottom: .6rem;
 }
 
-ul {
+.nav-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.heading-link {
+    color: #c9d1d9;
+    text-decoration: none;
+}
+
+.paragraph-link {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.paragraph-link:hover {
+    text-decoration: underline;
 }
 
 /* Dropdown Button */
