@@ -18,7 +18,7 @@
                         <div class="dropdown">
                             <button onclick="dropdown()" class="dropbtn"></button>
                             <ul id="toc-drop" class="dropdown-content rounded-corners nav-list">
-                                <li><a class="dropdown-item rounded-corners" href="#servers">Servers</a></li>
+                                <li><a class="dropdown-item rounded-corners" href="#minecraft-servers">Minecraft Servers</a></li>
                                 <li><a class="dropdown-item rounded-corners" href="#projects">Projects</a></li>
                                 <li><a class="dropdown-item rounded-corners" href="#about">About</a></li>
                                 <li><a class="dropdown-item rounded-corners" href="#education">Education</a></li>
@@ -29,16 +29,31 @@
                 </div>
                 
                 <h2 id="title">David Daniels</h2>
-                <h3 id="servers"><a class="heading-link" href="#servers">Servers</a></h3>
+                <h3 id="servers"><a class="heading-link" href="#minecraft-servers">Minecraft Servers</a></h3>
                 <hr class="heading-line">
-                <p>
-                    Current Servers
-                </p>
+                <table id="game" style="width:100%">
+                    <thead id="game table">
+                        <th>Icon</th>
+                        <th>Game type</th>
+                        <th>Version</th>
+                        <th>Address</th>
+                        <th>Port</th>
+                        <th>SRV</th>
+                        <th>Message</th>
+                        <th>Player Count</th>
+                        <th>Ping</th>
+                    </thead>
+                    <tbody id="game-table">
+                        <!--- This will be filled by index.js on load --->
+                    </tbody>
+                </table>
+                <p>For servers with a SRV record, you don't need to enter the port to connect.<br>Ping is an approximation based on how long it took for the host to return a HEADER. Take this with a grain of salt, you are likely to get better ping in Minecraft.</p>
+                <p></p>
                 <h3 id="projects"><a class="heading-link" href="#projects">Projects</a></h3>
                 <hr class="heading-line">
-                <p>
-                    Current projects
-                </p>
+                <table style="width:100%">
+                </table>
+                <p>Current projects</p>
                 <h3 id="about"><a class="heading-link" href="#about">About Me</a></h3>
                 <hr class="heading-line">
                 <p>
