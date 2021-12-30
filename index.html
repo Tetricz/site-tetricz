@@ -5,64 +5,97 @@
         <meta name=author content="David Daniels"/>   
         <meta name="keywords" content="Tetricz, tetricz, David Daniels, David Lee Daniels, l33t, haxor"/>  
         <title>David Daniels</title>
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="shortcut icon" type="image/png" href="..\css\favicon.png">
+        
     </head>
     <body class="full-bg-color">
 
     <div class="row">
-        <div class="col-2"></div>
-<!-- 
-            <div class="nav-container">
-                <nav class="position-fixed rounded-corners">
-                    <a class="custom-link nav-heading" href="#title">David Daniels</a>
-                    <a class="custom-link" href="#item-1">Item 1</a>
-                    <a class="custom-link" href="#item-1">Item 1</a>
-                    <a class="custom-link" href="#item-1">Item 1</a>
-                    <a class="custom-link" href="#item-1">Item 1</a>
-                </nav>
-            </div>
-        </div>
--->
-        <div class="col-8 main-content">
+        <div id="side-column-left"></div>
+        <div class="col main-content">
             <div class="rounded-corners">
-                <div class="dropdown">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                        Dropdown button
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Link 1</a></li>
-                        <li><a class="dropdown-item" href="#">Link 2</a></li>
-                        <li><a class="dropdown-item" href="#">Link 3</a></li>
-                    </ul>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="dropdown">
+                            <button onclick="dropdown()" class="dropbtn"></button>
+                            <ul id="toc-drop" class="dropdown-content rounded-corners nav-list">
+                                <li><a class="dropdown-item rounded-corners" href="#minecraft-servers">Minecraft Servers</a></li>
+                                <li><a class="dropdown-item rounded-corners" href="#projects">Projects</a></li>
+                                <li><a class="dropdown-item rounded-corners" href="#about">About</a></li>
+                                <li><a class="dropdown-item rounded-corners" href="#education">Education</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col"></div>              
                 </div>
                 <h2 id="title">David Daniels</h2>
-                <h3 id="item-1" class="heading">Item 1</h3>
+                <h3 id="servers"><a class="heading-link" href="#minecraft-servers">Minecraft Servers</a></h3>
                 <hr class="heading-line">
-                <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-                <h3 id="item-2">Item 2</h3>
+                <table id="game" style="width:100%">
+                    <thead>
+                        <th>Icon</th>
+                        <th>Game type</th>
+                        <th>Version</th>
+                        <th>Address</th>
+                        <th>Port</th>
+                        <th>SRV</th>
+                        <th>Message</th>
+                        <th>Player Count</th>
+                        <th>Ping</th>
+                    </thead>
+                    <tbody id="game-table">
+                        <!--- This will be filled by index.js on load --->
+                    </tbody>
+                </table>
+                <p>For servers with a SRV record, you don't need to enter the port to connect.<br>Ping is an approximation based on how long it took for the host to return a HEADER. Take this with a grain of salt, you are likely to get better ping in Minecraft.</p>
+                <p></p>
+                <h3 id="projects"><a class="heading-link" href="#projects">Projects</a></h3>
                 <hr class="heading-line">
-                <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-                <h3 id="item-3">Item 3</h3>
+                <table style="width:100%">
+                </table>
+                <p>Projects currently maintained</p>
+                <table id="projects" style="width:100%">
+                    <thead id="projects-head">
+                        <!--- filled by index.js on load -->
+                    </thead>
+                    <tbody id="projects-content">
+                        <!--- This will be filled by index.js on load --->
+                    </tbody>
+                </table>
+                <h3 id="about"><a class="heading-link" href="#about">About Me</a></h3>
                 <hr class="heading-line">
-                <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>
-                <h3 id="item-4">Item 4</h3>
-                <hr class="heading-line">
-                <p>This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.</p>    
+                <p>
+                    My dream job is a software engineer for embedded systems. I would primarily like to be on the software portion of embedded systems. I have a particular interest in Rust and have started teaching myself the language.
+                    I have a few projects that I'm working on to gain personal experience with embedded systems.
+                </p> 
+                <p>
+                    Some of my personal hobbies are self-hosting and decentralized systems. I have a particular interest in <a class="paragraph-link" href="https://www.storj.io">Storj DCS</a>. 
+                    This site itself is being hosted using storj as the host and cloudflare for DNS.
+                    From a young age I've been playing Video games. This love of video games and in particular Minecraft has created a vested interest in self-hosting. I want to host my own stuff on my own homelab server. 
+                    Whether it be a "totally legal" media server, cloud storage, or game servers for my friends and I.
+                </p>
+                <h3 id="education"><a class="heading-link" href="#education">Education</a></h3>
+                <hr class="heading-line">  
+                <p>
+                    <ul>
+                        <li>Associates in Computer Science from Lone Star College. </li>
+                        <li>Undergraduate Computer Science student at the University of Hosuton.</li>
+                    </ul>
+                </p>
             </div>
         </div>
-        <div class="col-2"></div>
+        <div id="side-column-right"></div>
     </div>
-        
-                    
     </body>
 </html>
 
 <!-- Bootstrap 5-->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Bootstrap 5 JavaScript -->
-<script src="js/boostrap.bundle.min.js"></script>
+<link href="css/bootstrap-grid.min.css" rel="stylesheet">
 
 <!--- include index.js-->
 <script src="js/index.js"></script>
+
+<!-- default stylesheet-->
+<link rel="stylesheet" href="css/index.css">
+
+<!-- location of favicon.png-->
+<link rel="shortcut icon" type="image/png" href="assets/favicon.png">
