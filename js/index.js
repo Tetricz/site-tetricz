@@ -19,7 +19,7 @@ window.onclick = function(event) {
 }
 
 // fetches json data from a site about game servers
-async function load_server(url){
+async function load_json(url){
   try {
     response = await fetch(url, {
       cache: 'no-cache'
@@ -49,14 +49,11 @@ async function ping(url) {
   }
 }
 
-
-
-
- window.onload = async function fill_tables() {
+async function fill_minecraft_tables(){
   const gameTable = document.querySelector('#game-table')
-  thurman619 = await load_server('https://api.mcsrvstat.us/2/thurman619.com');
-  tetricz = await load_server('https://api.mcsrvstat.us/2/play.tetricz.com');
-  createTetricz = await load_server('https://api.mcsrvstat.us/2/create.tetricz.com')
+  thurman619 = await load_json('https://api.mcsrvstat.us/2/thurman619.com');
+  tetricz = await load_json('https://api.mcsrvstat.us/2/play.tetricz.com');
+  createTetricz = await load_json('https://api.mcsrvstat.us/2/create.tetricz.com');
   if (tetricz.online) {
     ping('https://t1.tetricz.com')
     tetricz.ping = (await ping('https://t1.tetricz.com'))
@@ -115,5 +112,53 @@ async function ping(url) {
                                 <th>N/A</th>
                                 <th>N/A</th>
                             </tr>`
+  }
+}
+
+async function fill_project_tables(){
+  const projectsHead = document.querySelector('#projects-head');
+  const projectContent = document.querySelector('#projects-content');
+  const projectList = ['https://api.github.com/repos/Tetricz/docker-openvpn-client', 'https://api.github.com/repos/Tetricz/docker-yt-archive', 
+  'https://api.github.com/repos/Tetricz/docker-xbs-api', 'https://api.github.com/repos/Tetricz/docker-minecraft', 
+  'https://api.github.com/repos/Tetricz/docker-techdns', 'https://api.github.com/repos/Tetricz/docker-jmusic-bot']
+  projectsHead.innerHTML += `<th>Name</th>
+                            <th>Source</th>
+                            <th>Last Updated</th>`
+  for (i=0;i<projectList.length;i++){
+    repo = await load_json(projectList[i]);
+    projectContent.innerHTML += `<th>${repo.name}</th>
+                                <th><a href="${repo.html_url}" class="heading-link">GitHub</a></th>
+                                <th>${repo.updated_at}</th>`
+  }
+  
+}
+
+
+// initilize column amount based on height to width ratio
+window.onload = async function() {
+  const columnL = document.querySelector('#side-column-left')
+  const columnR = document.querySelector('#side-column-right')
+  if (window.innerHeight*1.2 < window.innerWidth) {
+    columnL.classList = "col-2"
+    columnR.classList = "col-2"
+  }else {
+    columnL.classList = ""
+    columnR.classList = ""
+  }
+  fill_minecraft_tables();
+  fill_project_tables();
+}
+
+
+// used to change on resize column amount based on height to width ratio
+window.onresize = async function() {
+  const columnL = document.querySelector('#side-column-left')
+  const columnR = document.querySelector('#side-column-right')
+  if (window.innerHeight*1.2 < window.innerWidth) {
+    columnL.classList = "col-2"
+    columnR.classList = "col-2"
+  }else {
+    columnL.classList = ""
+    columnR.classList = ""
   }
 }
