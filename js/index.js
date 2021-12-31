@@ -50,68 +50,46 @@ async function ping(url) {
 }
 
 async function fill_minecraft_tables(){
-  const gameTable = document.querySelector('#game-table')
-  thurman619 = await load_json('https://api.mcsrvstat.us/2/thurman619.com');
-  tetricz = await load_json('https://api.mcsrvstat.us/2/play.tetricz.com');
-  createTetricz = await load_json('https://api.mcsrvstat.us/2/create.tetricz.com');
-  if (tetricz.online) {
-    ping('https://t1.tetricz.com')
-    tetricz.ping = (await ping('https://t1.tetricz.com'))
-    console.log('play.tetricz.com is online')
-    console.log(tetricz)
-    gameTable.innerHTML += `<tr id="play.tetricz.com" class="table-contents">
-                                <th><image src="${tetricz.icon}" alt="assets/default-minecraft.png" width="32" height="32"></th>
-                                <th>Vanilla SMP</th>
-                                <th>${tetricz.version}</th>
-                                <th>play.tetricz.com</th>
-                                <th>${tetricz.port}</th>
-                                <th>${tetricz.debug.srv}</th>
-                                <th>${tetricz.motd.html}</th>
-                                <th>${tetricz.players.online}/${tetricz.players.max}</th>
-                                <th>${tetricz.ping}</th>
-                            </tr>`
-  }else{
-    console.log('play.tetricz.com is offline')
-    gameTable.innerHTML += `<tr id="play.tetricz.com" class="table-contents">
-                                <th><image src="assets/default-minecraft.png" width="32" height="32"></th>
-                                <th>Vanilla SMP</th>
-                                <th>N/A</th>
-                                <th>N/A</th>
-                                <th>N/A</th>
-                                <th>N/A</th>
-                                <th>N/A</th>
-                                <th>N/A</th>
-                                <th>N/A</th>
-                            </tr>`
-  }
-  if (createTetricz.online) {
-    ping('https://t1.tetricz.com')
-    createTetricz.ping = (await ping('https://t1.tetricz.com'))
-    console.log('cab.tetricz.com is online')
-    console.log(createTetricz)
-    gameTable.innerHTML += `<tr id="create.tetricz.com" class="table-contents">
-                                <th><image src="${createTetricz.icon}" alt="assets/default-minecraft.png" width="32" height="32"></th>
-                                <th>Create: Above and Beyond Modpack</th>
-                                <th>cab.tetricz.com</th>
-                                <th>${createTetricz.port}</th>
-                                <th>${createTetricz.debug.srv}</th>
-                                <th>${createTetricz.motd.html}</th>
-                                <th>${createTetricz.players.online}/${createTetricz.players.max}</th>
-                                <th>${createTetricz.ping}</th>
-                            </tr>`
-  }else{
-    console.log('cab.tetricz.com is offline')
-    gameTable.innerHTML += `<tr id="create.tetricz.com" class="table-contents">
-                                <th><image src="assets/default-minecraft.png" width="32" height="32"></th>
-                                <th>Create: Above and Beyond</th>
-                                <th>N/A</th>
-                                <th>N/A</th>
-                                <th>N/A</th>
-                                <th>N/A</th>
-                                <th>N/A</th>
-                                <th>N/A</th>
-                                <th>N/A</th>
-                            </tr>`
+  const gameHead = document.querySelector('#game-head')
+  const gameTable = document.querySelector('#game-content')
+  gameHead.innerHTML = `<th>Icon</th>
+                        <th>Version</th>
+                        <th>Address</th>
+                        <th>Port</th>
+                        <th>SRV</th>
+                        <th>Message</th>
+                        <th>Player Count</th>
+                        <th>Ping</th>`
+  const serverList = ['play.tetricz.com', 'cab.tetricz.com']
+  for (j=0;j<serverList.length;j++){
+    server = await load_json(`https://api.mcsrvstat.us/2/${serverList[j]}`);
+    if (server.online) {
+      server.ping = (await ping(`https://${serverList[j]}`))
+      console.log(`${serverList[j]} is online`)
+      console.log(server)
+      gameTable.innerHTML += `<tr id="${serverList[j]}" class="table-contents">
+                                  <th><image src="${server.icon}" alt="assets/default-minecraft.png" width="32" height="32"></th>
+                                  <th>${server.version}</th>
+                                  <th>${serverList[j]}</th>
+                                  <th>${server.port}</th>
+                                  <th>${server.debug.srv}</th>
+                                  <th>${server.motd.html}</th>
+                                  <th>${server.players.online}/${server.players.max}</th>
+                                  <th>${server.ping}</th>
+                              </tr>`
+    }else{
+      console.log(`${serverList[j]} is offline`)
+      gameTable.innerHTML += `<tr id="${serverList[j]}" class="table-contents">
+                                  <th><image src="assets/default-minecraft.png" width="32" height="32"></th>
+                                  <th>N/A</th>
+                                  <th>N/A</th>
+                                  <th>N/A</th>
+                                  <th>N/A</th>
+                                  <th>N/A</th>
+                                  <th>N/A</th>
+                                  <th>N/A</th>
+                              </tr>`
+    }
   }
 }
 
