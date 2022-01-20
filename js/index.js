@@ -1,5 +1,5 @@
 /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */ 
+toggle between hiding and showing the dropdown content */
 function dropdown() {
   document.getElementById("toc-drop").classList.toggle("show");
 }
@@ -36,14 +36,19 @@ async function load_json(url){
 // gets a rough estimation of ping to a site. Only works for addresses that will give a header response
 async function ping(url) {
   try {
-    let sendDate = (new Date()).getTime();
-    await fetch(url, {
-      mode: 'no-cors',
-      cache: 'no-cache'
-    })
-    let recDate = (new Date()).getTime();
+    let totalping = 0;
+    for (k=0; k<5; k++){
+      let sendDate = (new Date()).getTime();
+      await fetch(url, {
+        mode: 'no-cors',
+        cache: 'no-cache'
+      })
+      let recDate = (new Date()).getTime();
+      totalping = totalping + (recDate - sendDate);
+    }
+    let avgping = totalping / 5;
     // console.log('Approximate ping for ' + url + ' is ' + (recDate - sendDate) + ' ms')
-    return recDate - sendDate
+    return parseInt(totalping)
   } catch (error) {
     console.log("Failed to ping address")
   }
@@ -96,8 +101,8 @@ async function fill_minecraft_tables(){
 async function fill_project_tables(){
   const projectsHead = document.querySelector('#projects-head');
   const projectContent = document.querySelector('#projects-content');
-  const projectList = ['https://api.github.com/repos/Tetricz/docker-openvpn-client', 'https://api.github.com/repos/Tetricz/docker-yt-archive', 
-  'https://api.github.com/repos/Tetricz/docker-xbs-api', 'https://api.github.com/repos/Tetricz/docker-minecraft', 
+  const projectList = ['https://api.github.com/repos/Tetricz/docker-openvpn-client', 'https://api.github.com/repos/Tetricz/docker-yt-archive',
+  'https://api.github.com/repos/Tetricz/docker-xbs-api', 'https://api.github.com/repos/Tetricz/docker-minecraft',
   'https://api.github.com/repos/Tetricz/docker-techdns', 'https://api.github.com/repos/Tetricz/docker-jmusic-bot']
   projectsHead.innerHTML += `<th>Name</th>
                             <th>Source</th>
@@ -108,7 +113,7 @@ async function fill_project_tables(){
                                 <th><a href="${repo.html_url}" class="heading-link">GitHub</a></th>
                                 <th>${repo.updated_at}</th>`
   }
-  
+
 }
 
 
