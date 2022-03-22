@@ -17,26 +17,22 @@ window.addEventListener('load', function(){
   const navbar = document.querySelector('#nav')
   // test for mobile device
   // if so change formatting and change navbar type
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgentData) ) {
     // these are the changes to be made to the columns if it's a phone browser
     const columnL = document.querySelector('#side-column-left')
     const columnM = document.querySelector('#main-column')
     const columnR = document.querySelector('#side-column-right')
-    columnL.classList = "col-"
+    columnL.classList = ""
     columnM.classList = "col"
-    columnR.classList = "col-"
+    columnR.classList = ""
 
     navbar.innerHTML = `<button id="nav-button" onclick="dropnav()" class="navbtn"></button>
                         <ul id="nav-block">
-                            <a class="nav-link-mobile" href="https://dldanie2.heyuhnem.com/LABS/LAB1"><li>About</li></a>
-                            <a class="nav-link-mobile" href="https://dldanie2.heyuhnem.com/LABS/LAB2"><li>Map</li></a>
-                            <a class="nav-link-mobile" href="https://dldanie2.heyuhnem.com/LABS/LAB3"><li>Time</li></a>
+                            <a class="nav-link-mobile" href="https://www.tetricz.com/"><li>About</li></a>
                         </ul>`
   }else{
     navbar.innerHTML = `<div class="top-nav">
-                          <a class="nav-link" href="https://dldanie2.heyuhnem.com/LABS/LAB1">About</a>
-                          <a class="nav-link" href="https://dldanie2.heyuhnem.com/LABS/LAB2">Map</a>
-                          <a class="nav-link" href="https://dldanie2.heyuhnem.com/LABS/LAB3">Time</a>
+                          <a class="nav-link" href="https://www.tetricz.com/">About</a>
                         </div>`
   }
 });
