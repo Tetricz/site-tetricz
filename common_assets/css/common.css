@@ -1,0 +1,132 @@
+:root{
+    color-scheme: dark;
+    scrollbar-color: #808080 #808080;
+    overflow-x: hidden;
+    height: 100%
+}
+
+.scrolls::-webkit-scrollbar {
+    display: none;
+}
+
+.scrolls {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.top-nav{
+  background-color: #0d1117;
+  position: relative;
+  padding: 1rem 0rem 1rem 0rem;
+  border-radius: .3rem;
+  outline-style: solid;
+  outline-width: 0.1rem;
+  outline-color: #252931;
+}
+
+.nav-link{
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #c9d1d9;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: .3rem;
+}
+
+.nav-link:hover{
+  text-decoration: underline;
+  background-color: #131820;
+  outline-style: solid;
+  outline-width: 0.1rem;
+  outline-color: #252931;
+}
+
+.nav-link-mobile{
+  font-size: 1rem;
+  text-decoration: none;
+  color: #c9d1d9;
+  border-radius: .3rem;
+}
+
+#nav-block{
+  max-height: 0;
+  transition: max-height 0.4s ease-out;
+  overflow: hidden;
+  list-style-type: none;
+  background-color: #131820;
+  border-radius: .1rem;
+  outline-style: solid;
+  outline-width: 0.1rem;
+  outline-color: #252931;
+  line-height: 2rem;
+  text-align: center;
+  padding: 0;
+}
+
+.navbtn{
+    background-color: #0d1117;
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    background: url('https://dldanie2.heyuhnem.com/LABS/common_assets/chainlink-invert.png') 0 0;
+    background-size: 2rem 2rem;
+}
+
+.navbtn-active{
+    background-color: #0d1117;
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    background: url('https://dldanie2.heyuhnem.com/LABS/common_assets/chainlink.png') 0 0;
+    background-size: 2rem 2rem;
+}
+
+.full-bg-color {
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+.rounded-corners{
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: .3rem;
+    outline-style: solid;
+    outline-width: 0.1rem;
+    outline-color: #252931;
+}
+
+.heading-line{
+    border: 0.001rem solid #252931
+}
+
+.main-content{
+    padding-top: 1rem;
+}
+
+.title {
+    text-align: center;
+    margin-top: 1.2rem;
+    margin-bottom: .6rem;
+}
+
+.heading-link {
+    color: #c9d1d9;
+    text-decoration: none;
+}
+
+.paragraph-link {
+    color: #58a6ff;
+    background: none;
+    text-decoration: none;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.paragraph-link:hover {
+    text-decoration: underline;
+}
+
+.centered-text{
+    text-align: center;
+}

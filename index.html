@@ -4,83 +4,73 @@
         <meta charset="utf-8"/>
         <meta name=author content="David Daniels"/>
         <meta name="keywords" content="Tetricz, tetricz, David Daniels, David Lee Daniels"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Bootstrap 5-->
-        <link href="css/bootstrap-grid.min.css" rel="stylesheet">
-        <!--- include index.js-->
-        <script src="js/index.js"></script>
+        <link href="https://www.tetricz.com/common_assets/css/bootstrap-grid.min.css" rel="stylesheet">
         <!-- default stylesheet-->
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="https://www.tetricz.com/LAB1/css/index.css">
         <!-- location of favicon.png-->
-        <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
-        <title>David Daniels</title>
+        <link rel="shortcut icon" type="image/png" href="https://www.tetricz.com/common_assets/favicon.png">
+        <!-- Common stylesheet-->
+        <link rel="stylesheet" href="https://www.tetricz.com/common_assets/css/common.css">
+        <title>About</title>
 
     </head>
     <body class="full-bg-color">
 
     <div class="row">
-        <div id="side-column-left"></div>
-        <div class="col main-content">
+        <div id="side-column-left" class="col-2"></div>
+        <div id ="main-column" class="col-8 main-content">
             <div class="rounded-corners">
                 <div class="row">
-                    <div class="col-3">
-                        <div class="dropdown">
-                            <button onclick="dropdown()" class="dropbtn"></button>
-                            <ul id="toc-drop" class="dropdown-content rounded-corners nav-list">
-                                <li><a class="dropdown-item rounded-corners" href="#minecraft-servers">Minecraft Servers</a></li>
-                                <li><a class="dropdown-item rounded-corners" href="#projects">Projects</a></li>
-                                <li><a class="dropdown-item rounded-corners" href="#about">About</a></li>
-                                <li><a class="dropdown-item rounded-corners" href="#education">Education</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col"></div>
+                    <div id="nav" class="col"></div>
                 </div>
-                <h2 id="title">David Daniels</h2>
-                <h3 id="servers"><a class="heading-link" href="#minecraft-servers">Minecraft Servers</a></h3>
-                <hr class="heading-line">
-                <table id="game" style="width:100%">
-                    <thead id="game-head">
-                        <!--- This will be filled by index.js on load --->
-                    </thead>
-                    <tbody id="game-content">
-                        <!--- This will be filled by index.js on load --->
-                    </tbody>
-                </table>
-                <p>For servers with a SRV record, you don't need to enter the port to connect.<br>Ping is an approximation based on how long it took for the host to return a HEADER. Take this with a grain of salt, you are likely to get better ping in Minecraft.</p>
-                <h3 id="projects"><a class="heading-link" href="#projects">Projects</a></h3>
-                <hr class="heading-line">
-                <table style="width:100%">
-                </table>
-                <p>Projects currently maintained</p>
-                <table style="width:100%">
-                    <thead id="projects-head">
-                        <!--- filled by index.js on load -->
-                    </thead>
-                    <tbody id="projects-content">
-                        <!--- This will be filled by index.js on load --->
-                    </tbody>
-                </table>
+                <h2 class="title">David Daniels - Lab 1</h2>
+                <img class="profile-image" src="https://www.tetricz.com/common_assets/profile.jpg" alt="https://link.us1.storjshare.io/raw/jwad5lyvhuapuepuhh4eyrx5qcva/files/thurmanmcserver.png">
                 <h3 id="about"><a class="heading-link" href="#about">About Me</a></h3>
                 <hr class="heading-line">
                 <p>
-                    My dream job is a software engineer for embedded systems. I would primarily like to be on the software portion of embedded systems. I have a particular interest in Rust and have started teaching myself the language.
+                    My dream job is to be a software engineer working on embedded systems. I would primarily like to be on the software portion of embedded systems. I have a particular interest in Rust and have started teaching myself the language.
                     I have a few projects that I'm working on to gain personal experience with embedded systems.
                 </p>
                 <p>
                     Some of my personal hobbies are self-hosting and decentralized systems. I have a particular interest in <a class="paragraph-link" href="https://www.storj.io">Storj DCS</a>.
                     This site itself is being hosted using storj as the host and cloudflare for DNS.
-                    From a young age I've been playing Video games. This love of video games and in particular Minecraft has created a vested interest in self-hosting. I want to host my own stuff on my own homelab server.
-                    Whether it be a "totally legal" media server, cloud storage, or game servers for my friends and I.
+                    From a young age I've been playing Video games. This love of video games and in particular Minecraft has created a vested interest in self-hosting. I wanted to host my own stuff on my own homelab server.
+                    Whether it be a media server, cloud storage, or game servers for my friends and I. I love to read fiction and someday want to publish my own book. Just as I love to read fiction I also like to watch, I find myself
+                    watching anime, sci-fi and fantasy tv shows often.
                 </p>
+                <h3 id="goals"><a class="heading-link" href="#goals">Goals</a></h3>
+                <hr class="heading-line">
+                <p>
+                    My main goal for this class is to end up with a full on CRUD(create, read, update, delete) project. One that I will be able to show off in my resume and possibly use in the future.
+                </p>
+                <p>
+                    Career/Education goals for this year are to get some experience in the Computer Science field.
+                    Then try to get an internship lined up for next year and a part time job this year in either IT or some other related field.
+                </p>
+                <p>
+                    Some personal goals for me are to lose weight and get into better health than I currently am.
+                    This means I need to change my diet and start working out religiously. I also want to read more books this year than last.
+                    I only read around 6 last year, but I'm hoping to read one book a month at least this year.
+                </p>
+
                 <h3 id="education"><a class="heading-link" href="#education">Education</a></h3>
                 <hr class="heading-line">
                   <ul>
                       <li>Associates in Computer Science from Lone Star College. </li>
                       <li>Undergraduate Computer Science student at the University of Hosuton.</li>
                   </ul>
+                <h3 id="youtube-video"><a class="heading-link" href="#youtube-video">Youtube Video</a></h3>
+                <hr class="heading-line">
+                <div class="video-wrapper"><iframe id="embed-video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             </div>
         </div>
-        <div id="side-column-right"></div>
+        <div id="side-column-right" class="col-2"></div>
     </div>
     </body>
+    <!--- include index.js-->
+    <script src="https://www.tetricz.com/js/index.js"></script>
+    <!-- Common js-->
+    <script src="https://www.tetricz.com/common_assets/js/common.js"></script>
 </html>

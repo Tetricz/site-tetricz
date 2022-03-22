@@ -1,136 +1,19 @@
-:root{
-    color-scheme: dark;
-    scrollbar-color: #808080 #808080;
-    overflow-x: hidden;
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.scrolls::-webkit-scrollbar {
-    display: none;
+
+#embed-video{
+  border: 0;
 }
 
-.scrolls {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.custom-link{
-    color: #ffffff;
-    text-decoration: none;
-    text-align: center;
-    display: grid;
-    justify-content: center;
-    font-size: x-large;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
-
-.custom-link:hover{
-    color: #ffffff;
-    text-decoration: none;
-    text-align: center;
-    font-size: x-large;
-}
-
-.nav-heading{
-    font-size: x-large;
-}
-
-.nav-container{
-    padding-top: 2rem;
-    padding-left: 2rem;
-}
-
-.full-bg-color {
-    background-color: #0d1117;
-    color: #c9d1d9;
-}
-
-.rounded-corners{
-    padding: 1rem 1rem 1rem 1rem;
-    border-radius: .3rem;
-    outline-style: solid;
-    outline-width: 0.1rem;
-    outline-color: #252931;
-}
-
-.heading-line{
-    border: 0.001rem solid #252931
-}
-
-.main-content{
-    padding-top: 1rem;
-}
-
-#title {
-    text-align: center;
-    margin-top: 1.2rem;
-    margin-bottom: .6rem;
-}
-
-.nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.heading-link {
-    color: #c9d1d9;
-    text-decoration: none;
-}
-
-.paragraph-link {
-    color: #58a6ff;
-    text-decoration: none;
-}
-
-.paragraph-link:hover {
-    text-decoration: underline;
-}
-
-/* Dropdown Button */
-.dropbtn {
-    background-color: #0d1117;
-    color: white;
-    padding: 1rem;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    background: url('../assets/chainlink-invert.png') 0 0;
-    background-size: 2rem 2rem;
-}
-  
-/* Dropdown button on hover
-.dropbtn:hover {
-    background-color: #29313d;
-}
-*/
-  
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-  
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #242c38;
-    min-width: 10rem;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-  
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
+.profile-image{
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10rem;
+    height: auto;
+    border-radius: 20rem;
 }
-  
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #131820}
-  
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
