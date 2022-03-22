@@ -13,18 +13,19 @@ function dropnav(){
 
 // initilize functions and settings on browser load
 window.addEventListener('load', function(){
-  console.log(navigator.userAgent)
+  console.log(navigator.userAgentData)
+  let userData = navigator.userAgentData;
   const navbar = document.querySelector('#nav')
   // test for mobile device
   // if so change formatting and change navbar type
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgentData) ) {
+  if( userData.mobile ) {
     // these are the changes to be made to the columns if it's a phone browser
     const columnL = document.querySelector('#side-column-left')
     const columnM = document.querySelector('#main-column')
     const columnR = document.querySelector('#side-column-right')
-    columnL.classList = ""
+    columnL.classList = "col-"
     columnM.classList = "col"
-    columnR.classList = ""
+    columnR.classList = "col-"
 
     navbar.innerHTML = `<button id="nav-button" onclick="dropnav()" class="navbtn"></button>
                         <ul id="nav-block">
