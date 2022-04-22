@@ -8,3 +8,8 @@
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   border: 0;
 }
+
+mark{
+  background-color: #161B22;
+  color: tomato;
+}
