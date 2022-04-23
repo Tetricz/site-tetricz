@@ -1,0 +1,12 @@
+{
+  "nav":[
+    {
+      "name":"Home",
+      "href":"https://www.tetricz.com/"
+    },
+    {
+      "name":"Nextcloud Tips",
+      "href":"https://www.tetricz.com/nextcloud-tips"
+    }
+  ]
+}

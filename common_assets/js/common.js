@@ -16,6 +16,12 @@ window.addEventListener('load', function(){
   console.log(navigator.userAgentData)
   let userData = navigator.userAgentData;
   const navbar = document.querySelector('#nav')
+
+  //xhr setup
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://www.tetricz.com/info.json", true);
+  xhr.responseType = 'json';
+
   // test for mobile device
   // if so change formatting and change navbar type
   if( userData.mobile ) {
@@ -27,13 +33,41 @@ window.addEventListener('load', function(){
     columnM.classList = "col"
     columnR.classList = "col-"
 
-    navbar.innerHTML = `<button id="nav-button" onclick="dropnav()" class="navbtn"></button>
-                        <ul id="nav-block">
-                            <a class="nav-link-mobile" href="https://www.tetricz.com/"><li>About</li></a>
-                        </ul>`
+    xhr.onload = () => {
+      if (xhr.status === 200) {
+        var nav = xhr.response.nav;
+        let navString = `<button id="nav-button" onclick="dropnav()" class="navbtn"></button>
+                            <ul id="nav-block">`;
+        for (var i of nav) {
+          let name = i.name;
+          let href = i.href;
+          navString += `<a class="nav-link-mobile" href="${href}"><li>${name}</li></a>`;
+        }
+        navString += `</ul>`;
+        navbar.innerHTML = navString;
+      }
+      else {
+        alert('Request failed. Returned status of ' + xhr.status);
+      }
+    }
+    xhr.send()
   }else{
-    navbar.innerHTML = `<div class="top-nav">
-                          <a class="nav-link" href="https://www.tetricz.com/">About</a>
-                        </div>`
+    xhr.onload = () => {
+      if (xhr.status === 200) {
+        var nav = xhr.response.nav;
+        let navString = `<div class="top-nav">`;
+        for (var i of nav) {
+          let name = i.name;
+          let href = i.href;
+          navString += `<a class="nav-link" href="${href}">${name}</a>`;
+        }
+        navString += `</div>`;
+        navbar.innerHTML = navString;
+      }
+      else {
+        alert('Request failed. Returned status of ' + xhr.status);
+      }
+    }
+    xhr.send()
   }
 });

@@ -17,11 +17,12 @@
 .top-nav{
   background-color: #0d1117;
   position: relative;
-  padding: 1rem 0rem 1rem 0rem;
   border-radius: .3rem;
   outline-style: solid;
   outline-width: 0.1rem;
   outline-color: #252931;
+  display: flex;
+  justify-content: safe center;
 }
 
 .nav-link{
@@ -31,6 +32,7 @@
   padding: 1rem 1rem 1rem 1rem;
   border-radius: .3rem;
 }
+
 
 .nav-link:hover{
   text-decoration: underline;
@@ -68,7 +70,7 @@
     padding: 1rem;
     border: none;
     cursor: pointer;
-    background: url('https://dldanie2.heyuhnem.com/LABS/common_assets/chainlink-invert.png') 0 0;
+    background: url('https://www.tetricz.com/common_assets/chainlink-invert.png') 0 0;
     background-size: 2rem 2rem;
 }
 
@@ -78,7 +80,7 @@
     padding: 1rem;
     border: none;
     cursor: pointer;
-    background: url('https://dldanie2.heyuhnem.com/LABS/common_assets/chainlink-invert.png') 0 0;
+    background: url('https://www.tetricz.com/common_assets/chainlink-invert.png') 0 0;
     background-size: 2rem 2rem;
 }
 
@@ -129,4 +131,8 @@
 
 .centered-text{
     text-align: center;
+}
+
+.copyright{
+  padding-bottom: 1rem;
 }
