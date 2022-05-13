@@ -136,3 +136,8 @@
 .copyright{
   padding-bottom: 1rem;
 }
+
+.index-nav{
+    margin: auto;
+    position: relative;
+}

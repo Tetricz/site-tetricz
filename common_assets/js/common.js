@@ -23,16 +23,8 @@ window.addEventListener('load', function(){
   xhr.responseType = 'json';
 
   // test for mobile device
-  // if so change formatting and change navbar type
+  // set nav for mobile
   if( userData.mobile ) {
-    // these are the changes to be made to the columns if it's a phone browser
-    const columnL = document.querySelector('#side-column-left')
-    const columnM = document.querySelector('#main-column')
-    const columnR = document.querySelector('#side-column-right')
-    columnL.classList = "col-"
-    columnM.classList = "col"
-    columnR.classList = "col-"
-
     xhr.onload = () => {
       if (xhr.status === 200) {
         var nav = xhr.response.nav;
@@ -51,9 +43,16 @@ window.addEventListener('load', function(){
       }
     }
     xhr.send()
-  }else{
+  }else{  // not on mobile, set nav and columns for desktop use
     xhr.onload = () => {
       if (xhr.status === 200) {
+        const columnL = document.querySelector('#side-column-left')
+        const columnM = document.querySelector('#main-column')
+        const columnR = document.querySelector('#side-column-right')
+        columnL.classList = "col-2"
+        columnM.classList = "col"
+        columnR.classList = "col-1"
+        columnL.innerHTML = `<div class="rounded-corners index-nav">Code needs to be written here for projects</div>`;
         var nav = xhr.response.nav;
         let navString = `<div class="top-nav">`;
         for (var i of nav) {
