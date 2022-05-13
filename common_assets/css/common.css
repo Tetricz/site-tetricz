@@ -138,6 +138,38 @@
 }
 
 .index-nav{
-    margin: auto;
-    position: relative;
+    width: inherit;
+    position: fixed;
+    padding-bottom: 100%;
+    padding-right: 1rem;
+}
+
+.inner-nav{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: .3rem;
+    outline-style: solid;
+    outline-width: 0.1rem;
+    outline-color: #252931;
+}
+
+.inner-nav-btn{
+    border: none;
+    text-decoration: none;
+    color: #c9d1d9;
+    background-color: inherit;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: .3rem;
+    width: 100%;
+    text-align: left;
+}
+
+.inner-nav-btn:hover{
+    text-decoration: underline;
+    background-color: #131820;
+    outline-style: solid;
+    outline-width: 0.1rem;
+    outline-color: #252931;
 }

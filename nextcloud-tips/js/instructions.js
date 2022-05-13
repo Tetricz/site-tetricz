@@ -1,19 +1,33 @@
+function loadNav(){
+  let response = getNavData();
+  const navL = document.querySelector('#left-nav')
+
+  var nav = response.nctips;
+  let navString = "";
+  for (var i of nav){
+      let name = i.name;
+      let href = i.href;
+      navString += `<button class="inner-nav-btn" onclick="window.location.href='${href}';">${name}</button><br>`;
+  }
+  navL.innerHTML += navString;
+}
+
+let interval_id = 0;
+function checkReady(){
+  if(interval_id <= 0){
+      interval_id = setInterval(checkReady, 50)
+  }
+  var ready = getDone();
+  if(ready){
+      loadNav();
+      clearInterval(interval_id);
+  }
+}
+
+
 // initilize functions and settings on browser load
 window.addEventListener('load', function(){
-  console.log(navigator.userAgentData)
-  let userData = navigator.userAgentData;
-  const navbar = document.querySelector('#nav')
-  // test for mobile device
-  // if so change formatting and change navbar type
-  if( userData.mobile ) {
-    // these are the changes to be made to the columns if it's a phone browser
-    const columnL = document.querySelector('#side-column-left')
-    const columnM = document.querySelector('#main-column')
-    const columnR = document.querySelector('#side-column-right')
-    columnL.classList = "col-"
-    columnM.classList = "col"
-    columnR.classList = "col-"
-  }
+  checkReady();
 
   const embed_video = document.getElementsByClassName('embed-video')
   if(embed_video){

@@ -11,6 +11,16 @@ function dropnav(){
     }
 }
 
+var isDone = false;
+function getDone(){
+  return isDone;
+}
+
+var navData;
+function getNavData(){
+  return navData
+}
+
 // initilize functions and settings on browser load
 window.addEventListener('load', function(){
   console.log(navigator.userAgentData)
@@ -18,7 +28,7 @@ window.addEventListener('load', function(){
   const navbar = document.querySelector('#nav')
 
   //xhr setup
-  var xhr = new XMLHttpRequest();
+  xhr = new XMLHttpRequest();
   xhr.open("GET", "https://www.tetricz.com/info.json", true);
   xhr.responseType = 'json';
 
@@ -28,6 +38,7 @@ window.addEventListener('load', function(){
     xhr.onload = () => {
       if (xhr.status === 200) {
         var nav = xhr.response.nav;
+        navData = xhr.response;
         let navString = `<button id="nav-button" onclick="dropnav()" class="navbtn"></button>
                             <ul id="nav-block">`;
         for (var i of nav) {
@@ -37,6 +48,7 @@ window.addEventListener('load', function(){
         }
         navString += `</ul>`;
         navbar.innerHTML = navString;
+        isDone = true;
       }
       else {
         alert('Request failed. Returned status of ' + xhr.status);
@@ -52,8 +64,9 @@ window.addEventListener('load', function(){
         columnL.classList = "col-2"
         columnM.classList = "col"
         columnR.classList = "col-1"
-        columnL.innerHTML = `<div class="rounded-corners index-nav">Code needs to be written here for projects</div>`;
+        columnL.innerHTML = `<div class="index-nav"><div id="left-nav" class="inner-nav"><button class="inner-nav-btn" style="font-size:1.3rem;text-align:center" onclick="window.location.href='#';">Top</button></div></div>`;
         var nav = xhr.response.nav;
+        navData = xhr.response;
         let navString = `<div class="top-nav">`;
         for (var i of nav) {
           let name = i.name;
@@ -62,6 +75,7 @@ window.addEventListener('load', function(){
         }
         navString += `</div>`;
         navbar.innerHTML = navString;
+        isDone = true;
       }
       else {
         alert('Request failed. Returned status of ' + xhr.status);

@@ -12,5 +12,41 @@
       "name":"Github",
       "href":"https://github.com/Tetricz"
     }
+  ],
+  "indexNav":[
+    {
+      "name":"About",
+      "href":"#about"
+    },
+    {
+      "name":"Eduction",
+      "href":"#education"
+    }
+  ],
+  "nctips":[
+    {
+      "name":"Links",
+      "href":"#links"
+    },
+    {
+      "name":"Signup",
+      "href":"#signup"
+    },
+    {
+      "name":"Recommendations",
+      "href":"#recommendations"
+    },
+    {
+      "name":"Windows PC Setup",
+      "href":"#pc"
+    },
+    {
+      "name":"iPhone Setup",
+      "href":"#iphone"
+    },
+    {
+      "name":"Android Setup",
+      "href":"#android"
+    }
   ]
 }
