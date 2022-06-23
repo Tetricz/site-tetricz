@@ -1,7 +1,7 @@
 +++
 title="tetricz.com"
 draft=false
-date=2021-12-22
+date=2021-12-14
 +++
 
 ## V1 - The beginnings

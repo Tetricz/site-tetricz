@@ -1,7 +1,7 @@
 +++
 title="oxidized-ddclient"
 draft=false
-date=2022-04-22
+date=2022-03-23
 [extra]
 toc=true
 +++
