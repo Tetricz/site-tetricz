@@ -1,4 +1,5 @@
-# https://www.tetricz.com
-# David Daniels
+# tetricz.com
 
-A site made for myself by myself.<br>
+This is my site, it contains links to my social and interesting projects I worked on.  
+
+This is made using Zola with the template [Hermit Zola](https://github.com/VersBinarii/hermit_zola). [Alternate Link](https://www.getzola.org/themes/hermit/)

@@ -1,0 +1,58 @@
+# The URL the site will be built for
+base_url = "https://www.tetricz.com"
+
+theme = "hermit_zola"
+
+# Used in RSS by default
+title = "David Daniels"
+# The default language, used in RSS
+default_language = "en"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+[extra]
+home_subtitle = "Welcome to the chaos that is my mind."
+
+footer_copyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+hermit_menu = [
+    { link = "/projects", name = "Projects" },
+    { link = "/about", name = "About" },
+    { link = "/archive", name = "Archive"},
+    { link = "/services", name = "Services" }
+]
+
+hermit_social = [
+    { name = "youtube", link = "https://www.youtube.com/channel/UCnxPxO2ngbLKPB8f67tVKMg" },
+    { name = "github", link = "https://github.com/Tetricz" },
+    { name = "email", link = "mailto:DavidLeeDaniels@protonmail.com" }
+]
+
+
+
+[extra.highlightjs]
+enable = true
+clipboard = true
+theme = "vs2015"
+
+[extra.disqus]
+enable = false
+# Take this from your Disqus account
+shortname = "my-supa-dupa-blog"
+
+[extra.author]
+name = "David Daniels"
+email = "DavidLeeDaniels@protonmail.com"
+
+[extra.google_analytics]
+enable = false
+id = "UA-4XXXXXXX-X"

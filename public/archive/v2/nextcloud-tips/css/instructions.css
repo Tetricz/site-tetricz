@@ -1,0 +1,15 @@
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.embed-video{
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border: 0;
+}
+
+mark{
+  background-color: #161B22;
+  color: tomato;
+}
