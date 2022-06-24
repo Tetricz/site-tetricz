@@ -10,7 +10,7 @@ Initially the site was made very poorly by myself in high school.
 It was very basic and only used the most simple HTML and CSS I knew at the time.
 It was nothing more than a quick little project I made for one of my computer classes.  
 
-Sadly this version was lost to the ages, as I wasn't yet a data hoarder.
+You can find a copy of this [here](https://www.tetricz.com/archive/v1/).
 
 ## V2 - For some class
 

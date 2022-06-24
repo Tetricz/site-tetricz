@@ -1,0 +1,130 @@
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 3px;
+}
+
+nav {
+    height:5%;
+}
+
+h1, h3 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul#top-menu {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+
+}
+
+a {
+    color: #808080;
+    text-decoration: none;
+    outline: 0;
+}
+
+.nav-item {
+    display: inline-block;
+    font-size: 16px;
+    padding-right: 6%;
+}
+
+.nav-item a {
+    color: #808080;
+    transition: 0.3s color ease-in-out 1s;
+    -moz-transition: all ease-in-out 1s;
+    -webkit-transition: 0.3s color ease-in-out 1s;
+}
+
+.nav-item a:hover {
+    color:black;
+    transition: all ease-in-out 2s;
+    -moz-transition: all ease-in-out 2s;
+    -webkit-transition: all ease-in-out 2s;
+}
+
+nav > .container {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 0px;
+    border: 5px double #f0f0f0;
+    border-radius: 10px;
+    background-color: white;
+    height:100%;
+}
+
+.logo {
+    grid-column: 2 / 4;
+}
+
+.list {
+    grid-column: 9 / -1;
+}
+
+content > .container {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    height:90%;
+}
+
+.title {
+    grid-column: 4 / 8;
+    text-transform:uppercase;
+    padding-top:30%;
+    padding-bottom:5%;
+}
+
+.saying {
+    grid-column: 7 / 9;
+    padding-top: 0;
+    padding-bottom: 120%;
+}
+
+#h1tit {
+    color: #FFB302;
+}
+
+#h3tit {
+    color: #FBC901;
+    padding-top:20px;
+}
+
+.footer > .container {
+    height:5%;
+}
+
+.container > .portfolio {
+    height: 100%;
+    background-color: #FFB302;
+    grid-column: 7 / -1;
+    justify-content: flex-start;
+    padding-left: 20%;
+}
+
+.about {
+    height: 100%;
+    background-color: #FFB302;
+    grid-column: 1 / 7;
+}
+
+.statement {
+    padding-left: 20%;
+    padding-right: 10%;
+    color: #808080;
+    font: 18px Helvetica;
+}
+
+.hidden {
+    color: #FFB302;
+}

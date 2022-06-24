@@ -1,0 +1,21 @@
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.grid > div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+html, body {
+    font-family: Helvetica;
+    background-color: white;
+    margin: 0;
+    height: 100%;
+    background-image: url('../images/header.jpeg');
+}

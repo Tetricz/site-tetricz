@@ -5,7 +5,7 @@ title="Archive"
 ## Site Archive
 
 * [Version 1](https://www.tetricz.com/archive/v1/)
-* [Version 2](https://www.tetricz.com/archive/v1/)
+* [Version 2](https://www.tetricz.com/archive/v2/)
 * [Current](https://www.tetricz.com/)
 
 ## Minecraft Worlds
