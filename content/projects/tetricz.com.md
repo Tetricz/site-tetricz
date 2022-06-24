@@ -6,7 +6,7 @@ date=2021-12-14
 
 ## V1 - The beginnings
 
-Initially the site was made very poorly by myself in high school. 
+Initially the site was made very poorly by myself in high school.
 It was very basic and only used the most simple HTML and CSS I knew at the time.
 It was nothing more than a quick little project I made for one of my computer classes.  
 
