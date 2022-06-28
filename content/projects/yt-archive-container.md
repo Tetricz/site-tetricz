@@ -46,7 +46,7 @@ docker run -dit --tmpfs /tmp:rw,noexec,nosuid,size=1g -v </your/directory>:/data
 
 Docker compose example:  
 
-``` Docker
+``` dockerfile
 version: '3'
 services:
     yt-dl:

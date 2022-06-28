@@ -8,11 +8,11 @@ Minecraft
 
 Whitelisted SMPs
 
-``` http
+``` html
 play.tetricz.com
 ```
 
-``` http
+``` html
 thurman619.com
 ```
 
