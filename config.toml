@@ -17,7 +17,7 @@ build_search_index = false
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = false
+highlight_code = true
 
 [extra]
 home_subtitle = "Welcome to the chaos that is my mind."
@@ -28,7 +28,8 @@ hermit_menu = [
     { link = "/projects", name = "Projects" },
     { link = "/about", name = "About" },
     { link = "/archive", name = "Archive"},
-    { link = "/services", name = "Services" }
+    { link = "/services", name = "Services" },
+    { link = "/books", name = "Books" }
 ]
 
 hermit_social = [
