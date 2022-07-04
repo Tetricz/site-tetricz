@@ -29,7 +29,7 @@ window.addEventListener('load', function(){
 
   //xhr setup
   xhr = new XMLHttpRequest();
-  xhr.open("GET", "https://www.tetricz.com/info.json", true);
+  xhr.open("GET", "https://www.tetricz.com/archive/v2/info.json", true);
   xhr.responseType = 'json';
 
   // test for mobile device
