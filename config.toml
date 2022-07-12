@@ -28,8 +28,7 @@ hermit_menu = [
     { link = "/projects", name = "Projects" },
     { link = "/about", name = "About" },
     { link = "/archive", name = "Archive"},
-    { link = "/services", name = "Services" },
-    { link = "/books", name = "Books" }
+    { link = "/services", name = "Services" }
 ]
 
 hermit_social = [
