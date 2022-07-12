@@ -15,7 +15,7 @@ You can find a copy of this [here](https://www.tetricz.com/archive/v1/).
 ## V2 - For some class
 
 This version was a nice little template that I had made for use in a class.  
-I thought about completely reworking it into an actual template, but I honestly can't say that would want to finish it. I don't like the color scheme and the layout is a bit funky. There is a chance that [V2](https://www.tetricz.com/archive/v2/) may someday become a complete template, maybe even for Zola. Who knows? ¯\\\_(ツ)\_/¯
+I thought about completely reworking it into an actual template, but I honestly can't say that I want to finish it. I don't like the color scheme and the layout is a bit funky. There is a chance that [V2](https://www.tetricz.com/archive/v2/) may someday become a complete template, maybe even for Zola. Who knows? ¯\\\_(ツ)\_/¯
 
 ## Current - Made with hermit_zola template
 
