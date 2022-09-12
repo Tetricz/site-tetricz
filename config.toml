@@ -33,6 +33,7 @@ hermit_menu = [
 
 hermit_social = [
     { name = "youtube", link = "https://www.youtube.com/channel/UCnxPxO2ngbLKPB8f67tVKMg" },
+    { name = "linkedin", link = "https://www.linkedin.com/in/david-daniels-0b1b3b1a/" },
     { name = "github", link = "https://github.com/Tetricz" },
     { name = "email", link = "mailto:DavidLeeDaniels@protonmail.com" }
 ]
