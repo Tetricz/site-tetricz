@@ -21,6 +21,7 @@ highlight_code = true
 
 [extra]
 home_subtitle = "Welcome to the chaos that is my mind."
+home_summary = "Undergraduate Computer Science Student at the University of Houston"
 
 footer_copyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
@@ -28,12 +29,11 @@ hermit_menu = [
     { link = "/projects", name = "Projects" },
     { link = "/about", name = "About" },
     { link = "/archive", name = "Archive"},
-    { link = "/services", name = "Services" }
 ]
 
 hermit_social = [
     { name = "youtube", link = "https://www.youtube.com/channel/UCnxPxO2ngbLKPB8f67tVKMg" },
-    { name = "linkedin", link = "https://www.linkedin.com/in/david-daniels-0b1b3b1a/" },
+    { name = "linkedin", link = "https://www.linkedin.com/in/david-daniels-9715a324a" },
     { name = "github", link = "https://github.com/Tetricz" },
     { name = "email", link = "mailto:DavidLeeDaniels@protonmail.com" }
 ]
