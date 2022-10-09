@@ -4,8 +4,8 @@
 
 // Throttle
 //
-const throttle = (callback, limit) => {
-  let timeoutHandler = null;
+throttle = (callback, limit) => {
+  timeoutHandler = null;
   return () => {
     if (timeoutHandler == null) {
       timeoutHandler = setTimeout(() => {
@@ -18,7 +18,7 @@ const throttle = (callback, limit) => {
 
 // addEventListener Helper
 //
-const listen = (ele, e, callback) => {
+listen = (ele, e, callback) => {
   if (document.querySelector(ele) !== null) {
     document.querySelector(ele).addEventListener(e, callback);
   }
@@ -30,11 +30,11 @@ const listen = (ele, e, callback) => {
 
 // Auto Hide Header
 //
-let header = document.getElementById('site-header');
-let lastScrollPosition = window.pageYOffset;
+header = document.getElementById('site-header');
+lastScrollPosition = window.pageYOffset;
 
-const autoHideHeader = () => {
-  let currentScrollPosition = window.pageYOffset;
+autoHideHeader = () => {
+  currentScrollPosition = window.pageYOffset;
   if (currentScrollPosition > lastScrollPosition) {
     header.classList.remove('slideInUp');
     header.classList.add('slideOutDown');
@@ -47,10 +47,10 @@ const autoHideHeader = () => {
 
 // Mobile Menu Toggle
 //
-let mobileMenuVisible = false;
+mobileMenuVisible = false;
 
-const toggleMobileMenu = () => {
-  let mobileMenu = document.getElementById('mobile-menu');
+toggleMobileMenu = () => {
+  mobileMenu = document.getElementById('mobile-menu');
   if (mobileMenuVisible == false) {
     mobileMenu.style.animationName = 'bounceInRight';
     mobileMenu.style.webkitAnimationName = 'bounceInRight';
@@ -65,17 +65,17 @@ const toggleMobileMenu = () => {
 
 // Featured Image Toggle
 //
-const showImg = () => {
+showImg = () => {
   document.querySelector('.bg-img').classList.add('show-bg-img');
 };
 
-const hideImg = () => {
+hideImg = () => {
   document.querySelector('.bg-img').classList.remove('show-bg-img');
 };
 
 // ToC Toggle
 //
-const toggleToc = () => {
+toggleToc = () => {
   document.getElementById('toc').classList.toggle('show-toc');
 };
 
