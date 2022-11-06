@@ -8,7 +8,7 @@
   <meta itemprop="description" content="{{config.description}}" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="{{get_url(path="apple-touch-icon.png")}}"/>
-  <link rel="icon" type="image/svg+xml" href="{{get_url(path="favicon.svg")}}" />
+  <link rel="icon" type="image/svg+xml" sizes="any" title="Icon" href="{{get_url(path="favicon.svg")}}" />
   <link
     rel="shortcut icon"
     href="{{get_url(path="favicon.ico")}}"
@@ -28,7 +28,7 @@
 
 	{% block header %}
 	{% endblock header %}
-	
+
 	{% block title %}
 	<div id="spotlight" class="animated fadeIn">
 	  <div id="home-center">
@@ -46,7 +46,7 @@
 		</nav>
 		{% endblock main %}
 	  </div>
-	  
+
 	  {% block footer %}
 	  <div id="home-footer">
 		<p>&copy; {{ now() | date(format="%Y")}}
@@ -60,7 +60,7 @@
 	  </div>
 	  {% endblock footer %}
 	</div>
-	
+
 	<script src="{{get_url(path="js/main.js")}}"></script>
 
 	<!-- Math rendering -->
