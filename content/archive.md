@@ -12,7 +12,7 @@ title="Archive"
 
 I'm sad to say, I lost too many worlds to the times.
 
-* [thurman619.com](https://files.tetricz.com/minecraft-worlds/thurman/thurman_latest.tar.gz) <font color="red"><em>monthly</em></font>
+* [thurman619.com](https://files.tetricz.com/minecraft-worlds/legacy/legacy_latest.tar.gz) <font color="red"><em>monthly</em></font>
 * [play.tetricz.com](https://files.tetricz.com/minecraft-worlds/tetricz/tetricz_latest.tar.gz) <font color="red"><em>weekly</em></font>
 
 ## Books
